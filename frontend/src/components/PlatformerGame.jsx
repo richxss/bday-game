@@ -94,7 +94,7 @@ const PlatformerGame = () => {
       { x: 5770, y: 400, width: 200, height: 20 }
     ],
     girlfriend: {
-      x: 6000,
+      x: 5920,
       y: 350,
       width: 50,
       height: 50,
