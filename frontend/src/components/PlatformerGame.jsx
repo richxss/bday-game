@@ -427,25 +427,24 @@ const PlatformerGame = () => {
         style={{ imageRendering: 'pixelated' }}
       />
       
-      {/* Game Controls UI */}
-      <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-        <h3 className="font-bold text-lg mb-2">Controls</h3>
-        <div className="text-sm space-y-1">
-          <div><span className="font-semibold">←→</span> Move / Air Control</div>
-          <div><span className="font-semibold">Space</span> Jump / Double Jump</div>
+      {/* Game Controls UI - Minimal */}
+      <div className="absolute bottom-4 right-4 bg-white/70 backdrop-blur-sm rounded-md p-2 shadow-md text-xs">
+        <div className="space-y-1">
+          <div><span className="font-semibold">←→</span> Move</div>
+          <div><span className="font-semibold">Space</span> Jump</div>
         </div>
-        <div className="mt-3 space-y-2">
+        <div className="mt-2 space-y-1">
           <button
             onClick={resetGame}
-            className="w-full px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            className="w-full px-2 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600 transition-colors"
           >
-            Reset Game
+            Reset
           </button>
           <button
             onClick={() => setShowLevelEditor(true)}
-            className="w-full px-3 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
+            className="w-full px-2 py-1 bg-green-500 text-white rounded text-xs hover:bg-green-600 transition-colors"
           >
-            Level Editor
+            Editor
           </button>
         </div>
       </div>
