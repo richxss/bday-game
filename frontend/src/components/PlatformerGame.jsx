@@ -393,47 +393,63 @@ const PlatformerGame = () => {
         </div>
       </div>
 
-      {/* Sprite Upload UI */}
+      {/* Sprite Status UI */}
       <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-        <h3 className="font-bold text-lg mb-2">Sprites</h3>
-        <div className="space-y-2 text-sm">
-          <div>
-            <label htmlFor="boyfriend-sprite" className="block font-semibold mb-1">
-              Boyfriend (50×50px)
-            </label>
-            <input
-              id="boyfriend-sprite"
-              type="file"
-              accept="image/*"
-              onChange={(e) => e.target.files[0] && loadSprite('boyfriend', e.target.files[0])}
-              className="w-full text-xs"
-            />
+        <h3 className="font-bold text-lg mb-2">Sprites Loaded</h3>
+        <div className="space-y-1 text-sm">
+          <div className={`flex items-center gap-2 ${sprites.boyfriend ? 'text-green-600' : 'text-red-600'}`}>
+            <span>{sprites.boyfriend ? '✅' : '❌'}</span> Boyfriend
           </div>
-          <div>
-            <label htmlFor="gift-sprite" className="block font-semibold mb-1">
-              Gift (40×40px)
-            </label>
-            <input
-              id="gift-sprite"
-              type="file"
-              accept="image/*"
-              onChange={(e) => e.target.files[0] && loadSprite('gift', e.target.files[0])}
-              className="w-full text-xs"
-            />
+          <div className={`flex items-center gap-2 ${sprites.gift ? 'text-green-600' : 'text-red-600'}`}>
+            <span>{sprites.gift ? '✅' : '❌'}</span> Gift
           </div>
-          <div>
-            <label htmlFor="girlfriend-sprite" className="block font-semibold mb-1">
-              Girlfriend (50×50px)
-            </label>
-            <input
-              id="girlfriend-sprite"
-              type="file"
-              accept="image/*"
-              onChange={(e) => e.target.files[0] && loadSprite('girlfriend', e.target.files[0])}
-              className="w-full text-xs"
-            />
+          <div className={`flex items-center gap-2 ${sprites.girlfriend ? 'text-green-600' : 'text-red-600'}`}>
+            <span>{sprites.girlfriend ? '✅' : '❌'}</span> Girlfriend
           </div>
         </div>
+        
+        {/* Manual upload option still available */}
+        <details className="mt-3">
+          <summary className="text-xs cursor-pointer text-gray-600">Custom Sprites</summary>
+          <div className="mt-2 space-y-2 text-xs">
+            <div>
+              <label htmlFor="boyfriend-sprite" className="block font-semibold mb-1">
+                Boyfriend Override
+              </label>
+              <input
+                id="boyfriend-sprite"
+                type="file"
+                accept="image/*"
+                onChange={(e) => e.target.files[0] && loadSprite('boyfriend', e.target.files[0])}
+                className="w-full text-xs"
+              />
+            </div>
+            <div>
+              <label htmlFor="gift-sprite" className="block font-semibold mb-1">
+                Gift Override
+              </label>
+              <input
+                id="gift-sprite"
+                type="file"
+                accept="image/*"
+                onChange={(e) => e.target.files[0] && loadSprite('gift', e.target.files[0])}
+                className="w-full text-xs"
+              />
+            </div>
+            <div>
+              <label htmlFor="girlfriend-sprite" className="block font-semibold mb-1">
+                Girlfriend Override
+              </label>
+              <input
+                id="girlfriend-sprite"
+                type="file"
+                accept="image/*"
+                onChange={(e) => e.target.files[0] && loadSprite('girlfriend', e.target.files[0])}
+                className="w-full text-xs"
+              />
+            </div>
+          </div>
+        </details>
       </div>
 
       {/* Instructions */}
