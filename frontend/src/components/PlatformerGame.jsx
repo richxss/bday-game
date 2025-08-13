@@ -320,7 +320,7 @@ const PlatformerGame = () => {
       ctx.fillText('Happy Birthday!!', canvas.width / 2, canvas.height / 2);
       ctx.textAlign = 'left';
     }
-  }, []);
+  }, [sprites]); // Add sprites as dependency
 
   // Game loop
   useEffect(() => {
