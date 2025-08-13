@@ -62,13 +62,28 @@ const PlatformerGame = () => {
       { x: 1000, y: 220, width: 40, height: 40, collected: false }
     ],
     platforms: [
+      // Starting platforms
       { x: 0, y: 400, width: 400, height: 20 },
       { x: 250, y: 300, width: 200, height: 20 },
+      
+      // Early section
       { x: 500, y: 200, width: 200, height: 20 },
-      { x: 800, y: 250, width: 200, height: 20 },
-      { x: 1100, y: 150, width: 200, height: 20 },
-      { x: 1400, y: 300, width: 200, height: 20 },
-      { x: 1700, y: 400, width: 200, height: 20 }
+      { x: 750, y: 320, width: 180, height: 20 },
+      { x: 980, y: 250, width: 200, height: 20 },
+      
+      // Middle section with vertical challenge
+      { x: 1220, y: 150, width: 180, height: 20 },
+      { x: 1450, y: 280, width: 200, height: 20 },
+      { x: 1700, y: 180, width: 180, height: 20 },
+      
+      // Advanced section
+      { x: 1950, y: 320, width: 200, height: 20 },
+      { x: 2200, y: 200, width: 180, height: 20 },
+      { x: 2430, y: 350, width: 200, height: 20 },
+      
+      // Final approach to girlfriend
+      { x: 2680, y: 250, width: 180, height: 20 },
+      { x: 2900, y: 400, width: 200, height: 20 }
     ],
     girlfriend: {
       x: 1800,
