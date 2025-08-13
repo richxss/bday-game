@@ -12,7 +12,7 @@ const PlatformerGame = () => {
       velocityX: 0,
       velocityY: 0,
       onGround: false,
-      speed: 5,
+      speed: 3,
       jumpPower: 12
     },
     camera: {
