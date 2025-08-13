@@ -218,37 +218,51 @@ const PlatformerGame = () => {
     });
 
     // Draw gifts
-    ctx.fillStyle = '#FFD700';
     gifts.forEach(gift => {
       if (!gift.collected) {
-        ctx.fillRect(gift.x, gift.y, gift.width, gift.height);
-        // Add a simple gift bow effect
-        ctx.fillStyle = '#FF6347';
-        ctx.fillRect(gift.x + 15, gift.y + 5, 10, 5);
-        ctx.fillStyle = '#FFD700';
+        if (sprites.gift) {
+          ctx.drawImage(sprites.gift, gift.x, gift.y, gift.width, gift.height);
+        } else {
+          // Fallback placeholder
+          ctx.fillStyle = '#FFD700';
+          ctx.fillRect(gift.x, gift.y, gift.width, gift.height);
+          // Add a simple gift bow effect
+          ctx.fillStyle = '#FF6347';
+          ctx.fillRect(gift.x + 15, gift.y + 5, 10, 5);
+        }
       }
     });
 
-    // Draw player (boyfriend placeholder)
-    ctx.fillStyle = '#4169E1';
-    ctx.fillRect(player.x, player.y, player.width, player.height);
-    // Simple face
-    ctx.fillStyle = '#FFFFFF';
-    ctx.fillRect(player.x + 10, player.y + 10, 8, 8);
-    ctx.fillRect(player.x + 32, player.y + 10, 8, 8);
-    ctx.fillStyle = '#000000';
-    ctx.fillRect(player.x + 20, player.y + 30, 10, 5);
+    // Draw player (boyfriend)
+    if (sprites.boyfriend) {
+      ctx.drawImage(sprites.boyfriend, player.x, player.y, player.width, player.height);
+    } else {
+      // Fallback placeholder
+      ctx.fillStyle = '#4169E1';
+      ctx.fillRect(player.x, player.y, player.width, player.height);
+      // Simple face
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(player.x + 10, player.y + 10, 8, 8);
+      ctx.fillRect(player.x + 32, player.y + 10, 8, 8);
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(player.x + 20, player.y + 30, 10, 5);
+    }
 
     // Draw girlfriend if visible
     if (girlfriend.visible) {
-      ctx.fillStyle = '#FF69B4';
-      ctx.fillRect(girlfriend.x, girlfriend.y, girlfriend.width, girlfriend.height);
-      // Simple face
-      ctx.fillStyle = '#FFFFFF';
-      ctx.fillRect(girlfriend.x + 10, girlfriend.y + 10, 8, 8);
-      ctx.fillRect(girlfriend.x + 32, girlfriend.y + 10, 8, 8);
-      ctx.fillStyle = '#000000';
-      ctx.fillRect(girlfriend.x + 20, girlfriend.y + 30, 10, 5);
+      if (sprites.girlfriend) {
+        ctx.drawImage(sprites.girlfriend, girlfriend.x, girlfriend.y, girlfriend.width, girlfriend.height);
+      } else {
+        // Fallback placeholder
+        ctx.fillStyle = '#FF69B4';
+        ctx.fillRect(girlfriend.x, girlfriend.y, girlfriend.width, girlfriend.height);
+        // Simple face
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(girlfriend.x + 10, girlfriend.y + 10, 8, 8);
+        ctx.fillRect(girlfriend.x + 32, girlfriend.y + 10, 8, 8);
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(girlfriend.x + 20, girlfriend.y + 30, 10, 5);
+      }
     }
 
     ctx.restore();
