@@ -22,42 +22,32 @@ const PlatformerGame = () => {
       y: 0
     },
     gifts: [
-      // Starting area gifts (Platform 1-2)
-      { x: 150, y: 350, width: 40, height: 40, collected: false },
-      { x: 300, y: 250, width: 40, height: 40, collected: false },
-      { x: 380, y: 250, width: 40, height: 40, collected: false },
+      // Platform gifts (one per platform - 13 total)
+      { x: 200, y: 350, width: 40, height: 40, collected: false }, // Platform 1
+      { x: 350, y: 250, width: 40, height: 40, collected: false }, // Platform 2
+      { x: 600, y: 150, width: 40, height: 40, collected: false }, // Platform 3
+      { x: 850, y: 270, width: 40, height: 40, collected: false }, // Platform 4
+      { x: 1080, y: 200, width: 40, height: 40, collected: false }, // Platform 5
+      { x: 1320, y: 100, width: 40, height: 40, collected: false }, // Platform 6
+      { x: 1550, y: 230, width: 40, height: 40, collected: false }, // Platform 7
+      { x: 1800, y: 130, width: 40, height: 40, collected: false }, // Platform 8
+      { x: 2050, y: 270, width: 40, height: 40, collected: false }, // Platform 9
+      { x: 2300, y: 150, width: 40, height: 40, collected: false }, // Platform 10
+      { x: 2530, y: 300, width: 40, height: 40, collected: false }, // Platform 11
+      { x: 2780, y: 200, width: 40, height: 40, collected: false }, // Platform 12
+      { x: 3000, y: 350, width: 40, height: 40, collected: false }, // Platform 13
       
-      // Early section gifts (Platform 3-4)
-      { x: 550, y: 150, width: 40, height: 40, collected: false },
-      { x: 620, y: 150, width: 40, height: 40, collected: false },
-      { x: 800, y: 270, width: 40, height: 40, collected: false },
-      
-      // Middle section gifts (Platform 5-6)
-      { x: 1030, y: 200, width: 40, height: 40, collected: false },
-      { x: 1100, y: 200, width: 40, height: 40, collected: false },
-      { x: 1270, y: 100, width: 40, height: 40, collected: false },
-      { x: 1320, y: 100, width: 40, height: 40, collected: false },
-      
-      // Vertical challenge gifts (Platform 7-8)
-      { x: 1500, y: 230, width: 40, height: 40, collected: false },
-      { x: 1580, y: 230, width: 40, height: 40, collected: false },
-      { x: 1750, y: 130, width: 40, height: 40, collected: false },
-      { x: 1800, y: 130, width: 40, height: 40, collected: false },
-      
-      // Advanced section gifts (Platform 9-10)
-      { x: 2000, y: 270, width: 40, height: 40, collected: false },
-      { x: 2080, y: 270, width: 40, height: 40, collected: false },
-      { x: 2250, y: 150, width: 40, height: 40, collected: false },
-      { x: 2300, y: 150, width: 40, height: 40, collected: false },
-      
-      // Late section gifts (Platform 11-12)
-      { x: 2480, y: 300, width: 40, height: 40, collected: false },
-      { x: 2550, y: 300, width: 40, height: 40, collected: false },
-      { x: 2730, y: 200, width: 40, height: 40, collected: false },
-      
-      // Final platform gifts (Platform 13)
-      { x: 2950, y: 350, width: 40, height: 40, collected: false },
-      { x: 3020, y: 350, width: 40, height: 40, collected: false }
+      // Air gifts (floating high - 10 total, require jumping/double jumping)
+      { x: 400, y: 100, width: 40, height: 40, collected: false }, // High air between platforms 1-2
+      { x: 650, y: 50, width: 40, height: 40, collected: false },  // Very high air near platform 3
+      { x: 900, y: 80, width: 40, height: 40, collected: false },  // High air between platforms 4-5
+      { x: 1150, y: 60, width: 40, height: 40, collected: false }, // Very high air near platform 6
+      { x: 1400, y: 90, width: 40, height: 40, collected: false }, // High air between platforms 6-7
+      { x: 1650, y: 40, width: 40, height: 40, collected: false }, // Extremely high air
+      { x: 1950, y: 70, width: 40, height: 40, collected: false }, // High air between platforms 8-9
+      { x: 2150, y: 50, width: 40, height: 40, collected: false }, // Very high air near platform 10
+      { x: 2400, y: 90, width: 40, height: 40, collected: false }, // High air between platforms 10-11
+      { x: 2700, y: 60, width: 40, height: 40, collected: false }  // High air near platform 12
     ],
     platforms: [
       // Starting platforms
