@@ -72,19 +72,27 @@ const PlatformerGame = () => {
       for (const [key, url] of Object.entries(spriteUrls)) {
         try {
           const img = new Image();
-          img.crossOrigin = 'anonymous';
+          // Try without crossOrigin first
           await new Promise((resolve, reject) => {
-            img.onload = resolve;
-            img.onerror = reject;
+            img.onload = () => {
+              console.log(`✅ Loaded ${key} sprite successfully`);
+              resolve();
+            };
+            img.onerror = (error) => {
+              console.error(`❌ Failed to load ${key} sprite:`, error);
+              reject(error);
+            };
             img.src = url;
           });
           loadedSprites[key] = img;
         } catch (error) {
           console.warn(`Failed to load ${key} sprite:`, error);
+          // Keep the sprite as null, fallback will be used
         }
       }
       
-      setSprites(loadedSprites);
+      console.log('Loaded sprites:', Object.keys(loadedSprites));
+      setSprites(prev => ({ ...prev, ...loadedSprites }));
     };
 
     loadSprites();
