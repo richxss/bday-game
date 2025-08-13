@@ -121,7 +121,7 @@ const PlatformerGame = () => {
     gravity: 0.5,
     score: 0,
     gameWon: false,
-    levelWidth: 3300
+    levelWidth: 6200
   });
 
   const [score, setScore] = useState(0);
