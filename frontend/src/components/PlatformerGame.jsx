@@ -138,7 +138,7 @@ const PlatformerGame = () => {
     const gameState = gameStateRef.current;
     const { player, keys, gravity, platforms, gifts, girlfriend } = gameState;
 
-    // Handle input
+    // Handle input - Allow horizontal movement while jumping
     if (keys['ArrowLeft']) {
       player.velocityX = -player.speed;
     } else if (keys['ArrowRight']) {
@@ -147,9 +147,17 @@ const PlatformerGame = () => {
       player.velocityX *= 0.8; // Friction
     }
 
-    if (keys['Space'] && player.onGround) {
-      player.velocityY = -player.jumpPower;
-      player.onGround = false;
+    // Handle jumping with double jump
+    if (keys['Space'] && player.jumpsRemaining > 0) {
+      // Prevent rapid jumping by checking if space was just pressed
+      if (!gameState.spacePressed) {
+        player.velocityY = -player.jumpPower;
+        player.jumpsRemaining--;
+        player.onGround = false;
+        gameState.spacePressed = true;
+      }
+    } else {
+      gameState.spacePressed = false;
     }
 
     // Apply gravity
