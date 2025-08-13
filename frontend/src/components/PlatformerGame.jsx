@@ -204,6 +204,7 @@ const PlatformerGame = () => {
       player.y = 300;
       player.velocityX = 0;
       player.velocityY = 0;
+      player.jumpsRemaining = player.maxJumps; // Reset jumps on respawn
     }
 
     // Gift collection
