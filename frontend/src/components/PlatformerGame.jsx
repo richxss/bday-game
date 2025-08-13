@@ -22,11 +22,44 @@ const PlatformerGame = () => {
       y: 0
     },
     gifts: [
+      // Platform 1 gifts (starting area)
       { x: 300, y: 250, width: 40, height: 40, collected: false },
-      { x: 600, y: 150, width: 40, height: 40, collected: false },
-      { x: 900, y: 200, width: 40, height: 40, collected: false },
-      { x: 1200, y: 100, width: 40, height: 40, collected: false },
-      { x: 1500, y: 250, width: 40, height: 40, collected: false }
+      { x: 350, y: 250, width: 40, height: 40, collected: false },
+      { x: 150, y: 350, width: 40, height: 40, collected: false },
+      
+      // Platform 2 gifts
+      { x: 280, y: 250, width: 40, height: 40, collected: false },
+      { x: 400, y: 250, width: 40, height: 40, collected: false },
+      
+      // Platform 3 gifts
+      { x: 530, y: 150, width: 40, height: 40, collected: false },
+      { x: 580, y: 150, width: 40, height: 40, collected: false },
+      { x: 630, y: 150, width: 40, height: 40, collected: false },
+      
+      // Platform 4 gifts
+      { x: 830, y: 200, width: 40, height: 40, collected: false },
+      { x: 880, y: 200, width: 40, height: 40, collected: false },
+      { x: 930, y: 200, width: 40, height: 40, collected: false },
+      
+      // Platform 5 gifts
+      { x: 1130, y: 100, width: 40, height: 40, collected: false },
+      { x: 1180, y: 100, width: 40, height: 40, collected: false },
+      { x: 1230, y: 100, width: 40, height: 40, collected: false },
+      
+      // Platform 6 gifts
+      { x: 1430, y: 250, width: 40, height: 40, collected: false },
+      { x: 1480, y: 250, width: 40, height: 40, collected: false },
+      { x: 1530, y: 250, width: 40, height: 40, collected: false },
+      
+      // Platform 7 gifts
+      { x: 1730, y: 350, width: 40, height: 40, collected: false },
+      { x: 1780, y: 350, width: 40, height: 40, collected: false },
+      { x: 1830, y: 350, width: 40, height: 40, collected: false },
+      
+      // Additional scattered gifts for challenge
+      { x: 200, y: 300, width: 40, height: 40, collected: false },
+      { x: 700, y: 180, width: 40, height: 40, collected: false },
+      { x: 1000, y: 220, width: 40, height: 40, collected: false }
     ],
     platforms: [
       { x: 0, y: 400, width: 400, height: 20 },
