@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
+import LevelEditor from './LevelEditor';
 
 const PlatformerGame = () => {
   const canvasRef = useRef(null);
