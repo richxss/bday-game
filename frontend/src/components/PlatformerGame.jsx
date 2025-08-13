@@ -314,7 +314,7 @@ const PlatformerGame = () => {
 
     // Draw win message
     if (gameState.gameWon) {
-      ctx.fillStyle = '#FF0000';
+      ctx.fillStyle = '#000000';
       ctx.font = 'bold 48px Arial';
       ctx.textAlign = 'center';
       ctx.fillText('Happy Birthday!!', canvas.width / 2, canvas.height / 2);
