@@ -415,6 +415,17 @@ const PlatformerGame = () => {
           Score: {score}/{gameStateRef.current.gifts.length}
         </div>
       </div>
+
+      {/* Level Editor Modal */}
+      {showLevelEditor && (
+        <LevelEditor
+          currentLevel={{
+            platforms: gameStateRef.current.platforms,
+            gifts: gameStateRef.current.gifts
+          }}
+          onLevelUpdate={handleLevelUpdate}
+        />
+      )}
     </div>
   );
 };
