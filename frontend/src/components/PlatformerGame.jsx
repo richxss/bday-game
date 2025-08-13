@@ -373,6 +373,7 @@ const PlatformerGame = () => {
     gameState.player.y = 300;
     gameState.player.velocityX = 0;
     gameState.player.velocityY = 0;
+    gameState.player.jumpsRemaining = gameState.player.maxJumps; // Reset jumps
     gameState.camera.x = 0;
     gameState.score = 0;
     gameState.gameWon = false;
