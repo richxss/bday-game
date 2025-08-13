@@ -22,44 +22,42 @@ const PlatformerGame = () => {
       y: 0
     },
     gifts: [
-      // Platform 1 gifts (starting area)
-      { x: 300, y: 250, width: 40, height: 40, collected: false },
-      { x: 350, y: 250, width: 40, height: 40, collected: false },
+      // Starting area gifts (Platform 1-2)
       { x: 150, y: 350, width: 40, height: 40, collected: false },
+      { x: 300, y: 250, width: 40, height: 40, collected: false },
+      { x: 380, y: 250, width: 40, height: 40, collected: false },
       
-      // Platform 2 gifts
-      { x: 280, y: 250, width: 40, height: 40, collected: false },
-      { x: 400, y: 250, width: 40, height: 40, collected: false },
+      // Early section gifts (Platform 3-4)
+      { x: 550, y: 150, width: 40, height: 40, collected: false },
+      { x: 620, y: 150, width: 40, height: 40, collected: false },
+      { x: 800, y: 270, width: 40, height: 40, collected: false },
       
-      // Platform 3 gifts
-      { x: 530, y: 150, width: 40, height: 40, collected: false },
-      { x: 580, y: 150, width: 40, height: 40, collected: false },
-      { x: 630, y: 150, width: 40, height: 40, collected: false },
+      // Middle section gifts (Platform 5-6)
+      { x: 1030, y: 200, width: 40, height: 40, collected: false },
+      { x: 1100, y: 200, width: 40, height: 40, collected: false },
+      { x: 1270, y: 100, width: 40, height: 40, collected: false },
+      { x: 1320, y: 100, width: 40, height: 40, collected: false },
       
-      // Platform 4 gifts
-      { x: 830, y: 200, width: 40, height: 40, collected: false },
-      { x: 880, y: 200, width: 40, height: 40, collected: false },
-      { x: 930, y: 200, width: 40, height: 40, collected: false },
+      // Vertical challenge gifts (Platform 7-8)
+      { x: 1500, y: 230, width: 40, height: 40, collected: false },
+      { x: 1580, y: 230, width: 40, height: 40, collected: false },
+      { x: 1750, y: 130, width: 40, height: 40, collected: false },
+      { x: 1800, y: 130, width: 40, height: 40, collected: false },
       
-      // Platform 5 gifts
-      { x: 1130, y: 100, width: 40, height: 40, collected: false },
-      { x: 1180, y: 100, width: 40, height: 40, collected: false },
-      { x: 1230, y: 100, width: 40, height: 40, collected: false },
+      // Advanced section gifts (Platform 9-10)
+      { x: 2000, y: 270, width: 40, height: 40, collected: false },
+      { x: 2080, y: 270, width: 40, height: 40, collected: false },
+      { x: 2250, y: 150, width: 40, height: 40, collected: false },
+      { x: 2300, y: 150, width: 40, height: 40, collected: false },
       
-      // Platform 6 gifts
-      { x: 1430, y: 250, width: 40, height: 40, collected: false },
-      { x: 1480, y: 250, width: 40, height: 40, collected: false },
-      { x: 1530, y: 250, width: 40, height: 40, collected: false },
+      // Late section gifts (Platform 11-12)
+      { x: 2480, y: 300, width: 40, height: 40, collected: false },
+      { x: 2550, y: 300, width: 40, height: 40, collected: false },
+      { x: 2730, y: 200, width: 40, height: 40, collected: false },
       
-      // Platform 7 gifts
-      { x: 1730, y: 350, width: 40, height: 40, collected: false },
-      { x: 1780, y: 350, width: 40, height: 40, collected: false },
-      { x: 1830, y: 350, width: 40, height: 40, collected: false },
-      
-      // Additional scattered gifts for challenge
-      { x: 200, y: 300, width: 40, height: 40, collected: false },
-      { x: 700, y: 180, width: 40, height: 40, collected: false },
-      { x: 1000, y: 220, width: 40, height: 40, collected: false }
+      // Final platform gifts (Platform 13)
+      { x: 2950, y: 350, width: 40, height: 40, collected: false },
+      { x: 3020, y: 350, width: 40, height: 40, collected: false }
     ],
     platforms: [
       // Starting platforms
