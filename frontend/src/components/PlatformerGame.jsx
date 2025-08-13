@@ -180,6 +180,7 @@ const PlatformerGame = () => {
           player.y = platform.y - player.height;
           player.velocityY = 0;
           player.onGround = true;
+          player.jumpsRemaining = player.maxJumps; // Reset jumps when landing
         }
         // Hitting platform from below
         else if (player.velocityY < 0 && player.y > platform.y) {
