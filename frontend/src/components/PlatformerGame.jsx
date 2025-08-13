@@ -464,8 +464,7 @@ const PlatformerGame = () => {
       <div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-md">
         <h3 className="font-bold mb-2">Mission</h3>
         <p className="text-sm">
-          Collect all {gameStateRef.current.gifts.length} gifts to make your girlfriend appear, 
-          then reach her to wish Happy Birthday!
+          Collect the gifts to reach your girlfriend!
         </p>
         <div className="mt-2 text-xs text-gray-600">
           Score: {score}/{gameStateRef.current.gifts.length}
