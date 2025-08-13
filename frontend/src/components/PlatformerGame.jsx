@@ -69,9 +69,29 @@ const PlatformerGame = () => {
       { x: 2200, y: 200, width: 180, height: 20 },
       { x: 2430, y: 350, width: 200, height: 20 },
       
-      // Final approach to girlfriend
+      // Extended section 1
       { x: 2680, y: 250, width: 180, height: 20 },
-      { x: 2900, y: 400, width: 200, height: 20 }
+      { x: 2900, y: 150, width: 200, height: 20 },
+      { x: 3150, y: 300, width: 180, height: 20 },
+      
+      // Extended section 2
+      { x: 3380, y: 180, width: 200, height: 20 },
+      { x: 3630, y: 320, width: 180, height: 20 },
+      { x: 3850, y: 200, width: 200, height: 20 },
+      
+      // Extended section 3
+      { x: 4100, y: 350, width: 180, height: 20 },
+      { x: 4330, y: 250, width: 200, height: 20 },
+      { x: 4580, y: 150, width: 180, height: 20 },
+      
+      // Extended section 4
+      { x: 4810, y: 300, width: 200, height: 20 },
+      { x: 5060, y: 180, width: 180, height: 20 },
+      { x: 5290, y: 350, width: 200, height: 20 },
+      
+      // Final approach to girlfriend
+      { x: 5540, y: 250, width: 180, height: 20 },
+      { x: 5770, y: 400, width: 200, height: 20 }
     ],
     girlfriend: {
       x: 3100,
