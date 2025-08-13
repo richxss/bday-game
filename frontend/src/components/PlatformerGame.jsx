@@ -401,7 +401,8 @@ const PlatformerGame = () => {
         </div>
       </div>
 
-      {/* Sprite Status UI */}
+      {/* Sprite Status UI - Hidden, but keeping custom upload option */}
+      {/* 
       <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
         <h3 className="font-bold text-lg mb-2">Sprites Loaded</h3>
         <div className="space-y-1 text-sm">
@@ -416,7 +417,6 @@ const PlatformerGame = () => {
           </div>
         </div>
         
-        {/* Manual upload option still available */}
         <details className="mt-3">
           <summary className="text-xs cursor-pointer text-gray-600">Custom Sprites</summary>
           <div className="mt-2 space-y-2 text-xs">
@@ -459,6 +459,7 @@ const PlatformerGame = () => {
           </div>
         </details>
       </div>
+      */}
 
       {/* Instructions */}
       <div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-md">
