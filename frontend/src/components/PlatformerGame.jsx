@@ -58,6 +58,30 @@ const PlatformerGame = () => {
     girlfriend: null
   });
 
+  // Handle level updates from editor
+  const handleLevelUpdate = useCallback((newLevelData) => {
+    gameStateRef.current.platforms = newLevelData.platforms;
+    gameStateRef.current.gifts = newLevelData.gifts;
+    setShowLevelEditor(false);
+    resetGame();
+  }, []);
+
+  // Handle sprite loading
+  const loadSprite = useCallback((spriteKey, file) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        setSprites(prev => ({
+          ...prev,
+          [spriteKey]: img
+        }));
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }, []);
+
   // Handle keyboard input
   const handleKeyDown = useCallback((e) => {
     gameStateRef.current.keys[e.code] = true;
