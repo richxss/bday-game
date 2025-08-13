@@ -345,12 +345,63 @@ const PlatformerGame = () => {
           <div><span className="font-semibold">←→</span> Move</div>
           <div><span className="font-semibold">Space</span> Jump</div>
         </div>
-        <button
-          onClick={resetGame}
-          className="mt-3 w-full px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-        >
-          Reset Game
-        </button>
+        <div className="mt-3 space-y-2">
+          <button
+            onClick={resetGame}
+            className="w-full px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+          >
+            Reset Game
+          </button>
+          <button
+            onClick={() => setShowLevelEditor(true)}
+            className="w-full px-3 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
+          >
+            Level Editor
+          </button>
+        </div>
+      </div>
+
+      {/* Sprite Upload UI */}
+      <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+        <h3 className="font-bold text-lg mb-2">Sprites</h3>
+        <div className="space-y-2 text-sm">
+          <div>
+            <label htmlFor="boyfriend-sprite" className="block font-semibold mb-1">
+              Boyfriend (50×50px)
+            </label>
+            <input
+              id="boyfriend-sprite"
+              type="file"
+              accept="image/*"
+              onChange={(e) => e.target.files[0] && loadSprite('boyfriend', e.target.files[0])}
+              className="w-full text-xs"
+            />
+          </div>
+          <div>
+            <label htmlFor="gift-sprite" className="block font-semibold mb-1">
+              Gift (40×40px)
+            </label>
+            <input
+              id="gift-sprite"
+              type="file"
+              accept="image/*"
+              onChange={(e) => e.target.files[0] && loadSprite('gift', e.target.files[0])}
+              className="w-full text-xs"
+            />
+          </div>
+          <div>
+            <label htmlFor="girlfriend-sprite" className="block font-semibold mb-1">
+              Girlfriend (50×50px)
+            </label>
+            <input
+              id="girlfriend-sprite"
+              type="file"
+              accept="image/*"
+              onChange={(e) => e.target.files[0] && loadSprite('girlfriend', e.target.files[0])}
+              className="w-full text-xs"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Instructions */}
