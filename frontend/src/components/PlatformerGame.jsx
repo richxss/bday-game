@@ -51,6 +51,12 @@ const PlatformerGame = () => {
 
   const [score, setScore] = useState(0);
   const [gameWon, setGameWon] = useState(false);
+  const [showLevelEditor, setShowLevelEditor] = useState(false);
+  const [sprites, setSprites] = useState({
+    boyfriend: null, // Will be loaded when provided
+    gift: null,
+    girlfriend: null
+  });
 
   // Handle keyboard input
   const handleKeyDown = useCallback((e) => {
