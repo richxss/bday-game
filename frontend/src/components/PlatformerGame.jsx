@@ -53,10 +53,42 @@ const PlatformerGame = () => {
   const [gameWon, setGameWon] = useState(false);
   const [showLevelEditor, setShowLevelEditor] = useState(false);
   const [sprites, setSprites] = useState({
-    boyfriend: null, // Will be loaded when provided
+    boyfriend: null,
     gift: null,
     girlfriend: null
   });
+
+  // Preload provided sprites
+  useEffect(() => {
+    const loadSprites = async () => {
+      const spriteUrls = {
+        boyfriend: 'https://customer-assets.emergentagent.com/job_love-platformer/artifacts/sdn8l7dd_boyfriend.png.jpg',
+        gift: 'https://customer-assets.emergentagent.com/job_love-platformer/artifacts/x1rc9vp3_gift.png.jpg',
+        girlfriend: 'https://customer-assets.emergentagent.com/job_love-platformer/artifacts/wu3ydof9_girlfriend.png.jpg'
+      };
+
+      const loadedSprites = {};
+      
+      for (const [key, url] of Object.entries(spriteUrls)) {
+        try {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          await new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = url;
+          });
+          loadedSprites[key] = img;
+        } catch (error) {
+          console.warn(`Failed to load ${key} sprite:`, error);
+        }
+      }
+      
+      setSprites(loadedSprites);
+    };
+
+    loadSprites();
+  }, []);
 
   // Handle level updates from editor
   const handleLevelUpdate = useCallback((newLevelData) => {
